@@ -5,5 +5,8 @@ html = urlopen("http://www.pythonscraping.com/pages/warandpeace.html")
 bsObj = BeautifulSoup(html, "html.parser")
 
 # 김민규
-print(bsObj)
+
+nameList = bsObj.findAll("span")
+
+print(nameList)
 
