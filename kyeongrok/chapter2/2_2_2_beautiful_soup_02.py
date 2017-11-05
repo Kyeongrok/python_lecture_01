@@ -4,8 +4,8 @@ from bs4 import BeautifulSoup
 html = urlopen("http://www.pythonscraping.com/pages/warandpeace.html")
 bsObj = BeautifulSoup(html, "html.parser")
 
-# print(bsObj)
-
-nameList = bsObj.findAll("span")
-
+nameList = bsObj.findAll("span", {"class":"red"})
 print(nameList)
+
+for name in nameList:
+    print(name.get_text())
