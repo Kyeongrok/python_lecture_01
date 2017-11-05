@@ -3,6 +3,8 @@ from bs4 import BeautifulSoup
 html = urlopen("http://www.pythonscraping.com/pages/warandpeace.html")
 bsObj = BeautifulSoup(html, "html.parser")
 
-nameList = bsObj.findAll("span", {"class":"red"})
-for name in nameList:
-    print(name.get_text())
+print(bsObj)
+
+nameList = bsObj.findAll(text="the prince")
+print(nameList)
+print(len(nameList))
