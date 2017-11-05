@@ -4,5 +4,6 @@ from bs4 import BeautifulSoup
 html = urlopen("http://www.pythonscraping.com/pages/warandpeace.html")
 bsObj = BeautifulSoup(html, "html.parser")
 
+# 김민규
 print(bsObj)
 
