@@ -1,14 +1,9 @@
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
-html = urlopen("http://www.pythonscraping.com/pages/warandpeace.html")
+html = urlopen("http://pann.nate.com/")
 bs0bj = BeautifulSoup(html, "html.parser")
 
-# print(bs0bj)
+print(bs0bj)
 
-nameList = bs0bj.findAll("span", {"class":"green"})
-
-# for name in nameList:
+nameList = bs0bj.findAll("a")
 print(nameList)
-    # print(name.get_text())
-
-# Tag란 <>로 시작해서 </>로 끝나는 것
