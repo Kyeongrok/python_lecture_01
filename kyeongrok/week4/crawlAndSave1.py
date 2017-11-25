@@ -7,8 +7,9 @@ bsObj = BeautifulSoup(html, "html.parser")
 ulListRankList = bsObj.find('ul', {'class':'list rank-list'})
 liList = ulListRankList.findAll('li')
 
+file = open("새파일.txt", 'w', encoding='utf-8')
 for li in liList:
     liTit = li.find('span', {'class':'tit'})
-    print(liTit.text)
+    file.write(liTit.text + "\n")
 
 
